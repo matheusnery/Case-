@@ -1,0 +1,9 @@
+id pessoa, nome pessoa, data ref da venda, valor da venda
+
+select id_pessoa, d_pessoa.nm_pessoa, d_tempo.dt_ref, vl_venda, count(*)
+from f_vendas 
+inner join d_pessoa on f_vendas.id_pessoa = d_pessoa.id_pessoa
+inner join d_tempo on f_vendas.id_tempo = d_tempo.id_tempo
+inner join d_loja on f_vendas.id_loja = d_loja.id_loja
+where d_tempo.nu_mes="Janeiro", d_tempo.nu_ano="2020", d_loja.ds_uf = "CE"
+group by id_venda

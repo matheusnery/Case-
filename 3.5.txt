@@ -1,0 +1,5 @@
+ultima compra cliente.
+
+select id_cliente, max(dt_ref) 
+from d_vendas
+left join d_tempo on d_vendas.id_tempo = d_tempo.id_tempo

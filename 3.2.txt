@@ -1,0 +1,6 @@
+ID pessoa e quantidade de compras
+
+select id_pessoa, count(id_venda) 
+from f_vendas 
+left JOIN d_pessoa ON f_vendas.id_tempo = d_tempo.id_tempo
+where NU_MES = "Março", NU_ANO = "2020"
